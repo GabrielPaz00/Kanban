@@ -2,6 +2,13 @@ import { closeModal } from './modal.js';
 import { createNewTemplate } from './create-template.js';
 import { moveNext, movePrev } from './change-card.js';
 
+/**
+ * Adds a new task to the taskArray and updates the tableArray and rows.
+ *
+ * @param {Array} taskArray - The array of tasks.
+ * @param {Array} tableArray - The array of table elements.
+ * @param {Array} rows - The array of row elements.
+ */
 function addNewTask(taskArray, tableArray, rows) {
   const titleTaskInput = document.querySelector('[data-input-title]');
   const descriptionInput = document.querySelector('[data-textarea]');

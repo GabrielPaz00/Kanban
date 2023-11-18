@@ -1,5 +1,13 @@
 import { moveNext, movePrev } from './change-card.js';
 
+/**
+ * Creates a new template for a Kanban board.
+ *
+ * @param {number} i - The index of the column where the template will be created.
+ * @param {Array} tableArray - An array representing the Kanban board table.
+ * @param {Array} rows - An array containing the rows of the Kanban board.
+ * @returns {Object} - An object containing the elements of the newly created template.
+ */
 export const createNewTemplate = (i, tableArray, rows) => {
   //create new td
   const tdTask = document.createElement('td');

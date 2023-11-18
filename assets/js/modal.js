@@ -1,8 +1,14 @@
+/**
+ * Shows the modal by adding the 'modal--show' class and calling the showModal() method.
+ */
 const showModal = () => {
   const modal = document.querySelector('[data-modal]');
   modal.classList.add('modal--show');
   modal.showModal();
 };
+/**
+ * Closes the modal and resets the input fields.
+ */
 const closeModal = () => {
   const modal = document.querySelector('[data-modal]');
   modal.classList.remove('modal--show');

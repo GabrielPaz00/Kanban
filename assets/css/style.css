@@ -1,3 +1,17 @@
+/**
+ * This CSS file contains styles for a Kanban board application.
+ * It sets the default styles for the entire document, including the body background,
+ * font family, and font size. It also defines styles for the main container, title,
+ * table, and modal components.
+ * 
+ * The styles for the modal component include a show class that modifies the appearance
+ * of the modal when it is displayed. It sets the border radius, padding, background color,
+ * width, and alignment. It also defines styles for the modal buttons, title, input fields,
+ * and error state.
+ * 
+ * The styles for the table component include styles for the table header, title, body cells,
+ * and body rows. It sets the background color, padding, text alignment, and border styles.
+ */
 * {
   margin: 0;
   padding: 0;

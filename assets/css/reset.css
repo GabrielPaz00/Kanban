@@ -1,3 +1,9 @@
+/**
+ * This CSS file contains a reset stylesheet that sets default styles for various HTML elements.
+ * It removes margins, paddings, borders, and sets font sizes and styles to 100%.
+ * It also includes styles for common elements like links, images, buttons, inputs, and textareas.
+ * Use this file as a starting point to ensure consistent styling across different browsers and devices.
+ */
 html,
 body,
 div,

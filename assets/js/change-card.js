@@ -1,5 +1,12 @@
 import { createNewTemplate } from './create-template.js';
 
+/**
+ * Moves the card to the next column in the Kanban board.
+ *
+ * @param {Event} event - The event object triggered by the move action.
+ * @param {Array} tableArray - The array representing the Kanban board columns.
+ * @param {Array} rows - The array representing the Kanban board rows.
+ */
 export function moveNext(event, tableArray, rows) {
   console.clear();
   let container = event.target.parentElement.parentElement;
@@ -77,6 +84,13 @@ export function moveNext(event, tableArray, rows) {
     row.showList();
   });
 }
+/**
+ * Moves the card to the previous column in the Kanban board.
+ *
+ * @param {Event} event - The event object triggered by the user action.
+ * @param {Array} tableArray - The array representing the Kanban board columns and rows.
+ * @param {Array} rows - The array representing the rows in the Kanban board.
+ */
 export function movePrev(event, tableArray, rows) {
   console.clear();
   let container = event.target.parentElement.parentElement;
