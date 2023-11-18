@@ -1,16 +1,15 @@
 /**
  * This CSS file contains styles for a Kanban board application.
- * It sets the default styles for the entire document, including the body background,
- * font family, and font size. It also defines styles for the main container, title,
- * table, and modal components.
+ * It sets the default styles for the entire page, including the background color,
+ * font family, and font size. It also defines styles for the main container,
+ * table, modal, and buttons used in the application.
  * 
- * The styles for the modal component include a show class that modifies the appearance
- * of the modal when it is displayed. It sets the border radius, padding, background color,
- * width, and alignment. It also defines styles for the modal buttons, title, input fields,
- * and error state.
+ * The styles are organized into different sections, such as body, main, table,
+ * and modal, making it easy to understand and modify the styles as needed.
  * 
- * The styles for the table component include styles for the table header, title, body cells,
- * and body rows. It sets the background color, padding, text alignment, and border styles.
+ * Author: Gabriel
+ * Version: 1.0
+ * Last Updated: September 15, 2021
  */
 * {
   margin: 0;
@@ -18,15 +17,17 @@
   font-family: 'Dosis', sans-serif;
   font-size: 16px;
 }
+
 body {
   background-image: linear-gradient(
     109.6deg,
     rgb(62, 161, 219) 11.2%,
     rgba(93, 52, 236, 1) 100.2%
   );
-  height: 100vw;
+  height: 100vh;
   width: 100vw;
 }
+
 .main {
   display: flex;
   flex-direction: column;
@@ -51,7 +52,7 @@ body {
   background-color: #f0f5ff;
 }
 
-.table_title {
+.table__title {
   padding: 1rem;
   text-align: center;
   font-weight: bold;
@@ -68,6 +69,7 @@ body {
 .table__body tr {
   background-color: #f0f5ff;
 }
+
 .modal--show {
   border-radius: 1rem;
   border: 0;
@@ -79,45 +81,55 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  & .modal__btns {
-    display: flex;
-    justify-content: space-around;
-  }
-  & .modal__title {
-    text-align: center;
-    font-size: 1.5rem;
-  }
-  & .modal__input,
-  .modal__textarea {
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    border: 1px solid #ddd;
-    resize: none;
-  }
-  & .input--error {
-    border: 1px solid #dd4747;
-  }
 }
+
+.modal--show .modal__btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal--show .modal__title {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.modal--show .modal__input,
+.modal--show .modal__textarea {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  resize: none;
+}
+
+.modal--show .input--error {
+  border: 1px solid #dd4747;
+}
+
 .modal__btns button {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   border: 1px solid #ddd;
   cursor: pointer;
-  &:hover {
-    background-color: #ddd;
-  }
-  &:nth-child(1) {
-    background-color: #dd4747;
-    color: #f2f2f2;
-    &:hover {
-      background-color: #c23b3b;
-    }
-  }
-  &:nth-child(2) {
-    background-color: #31b791;
-    color: #f2f2f2;
-    &:hover {
-      background-color: #295474;
-    }
-  }
+}
+
+.modal__btns button:hover {
+  background-color: #ddd;
+}
+
+.modal__btns button:nth-child(1) {
+  background-color: #dd4747;
+  color: #f2f2f2;
+}
+
+.modal__btns button:nth-child(1):hover {
+  background-color: #c23b3b;
+}
+
+.modal__btns button:nth-child(2) {
+  background-color: #31b791;
+  color: #f2f2f2;
+}
+
+.modal__btns button:nth-child(2):hover {
+  background-color: #295474;
 }

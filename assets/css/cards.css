@@ -1,5 +1,4 @@
 /**
- * 
  * CSS styles for the cards in a table.
  * 
  * The .table__card class represents a card element within a table.
@@ -32,59 +31,56 @@
   padding: 1rem;
   margin: 1.25rem 0rem;
   border-radius: 1rem;
-  & :hover {
-    cursor: pointer;
-  }
+  cursor: pointer;
 }
-.table__body tr td:nth-child(1) {
-  & .table__card {
-    box-shadow: 0rem 0.2rem #dd4747;
-    & .table__card__btn-container {
-      display: flex;
-      justify-content: center;
-      & .table__card__btn:first-child {
-        display: none;
-      }
-    }
-  }
+
+.table__body tr td:nth-child(1) .table__card {
+  box-shadow: 0rem 0.2rem #dd4747;
 }
-.table__body tr td:nth-child(2) {
-  & .table__card {
-    box-shadow: 0rem 0.2rem #9e82ec;
-  }
+
+.table__body tr td:nth-child(1) .table__card__btn-container {
+  display: flex;
+  justify-content: center;
 }
-.table__body tr td:nth-child(3) {
-  & .table__card {
-    box-shadow: 0rem 0.2rem #295474;
-  }
+
+.table__body tr td:nth-child(1) .table__card__btn:first-child {
+  display: none;
 }
-.table__body tr td:nth-child(4) {
-  & .table__card {
-    box-shadow: 0rem 0.2rem #31b791;
-    & .table__card__btn-container {
-      display: flex;
-      justify-content: center;
-      & .table__card__btn:last-child {
-        display: none;
-      }
-    }
-  }
+
+.table__body tr td:nth-child(2) .table__card {
+  box-shadow: 0rem 0.2rem #9e82ec;
+}
+
+.table__body tr td:nth-child(3) .table__card {
+  box-shadow: 0rem 0.2rem #295474;
+}
+
+.table__body tr td:nth-child(4) .table__card {
+  box-shadow: 0rem 0.2rem #31b791;
+}
+
+.table__body tr td:nth-child(4) .table__card__btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.table__body tr td:nth-child(4) .table__card__btn:last-child {
+  display: none;
 }
 
 .table__card__btn-container {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
-  & .table__card__btn {
-    background-color: #fcffff;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #000;
-    & :hover {
-      cursor: pointer;
-    }
-  }
+}
+
+.table__card__btn {
+  background-color: #fcffff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
 }
