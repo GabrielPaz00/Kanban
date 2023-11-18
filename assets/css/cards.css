@@ -1,86 +1,65 @@
 /**
- * CSS styles for the cards in a table.
  * 
- * The .table__card class represents a card element within a table.
- * It has a white background color, padding, margin, and border radius.
- * When hovered over, it changes the cursor to a pointer.
- * 
- * The .table__body tr td:nth-child(1) selector targets the first column of the table.
- * If a .table__card element is found within this column, it adds a box shadow with a red color.
- * It also hides the first button within the .table__card__btn-container.
- * 
- * The .table__body tr td:nth-child(2) selector targets the second column of the table.
- * If a .table__card element is found within this column, it adds a box shadow with a purple color.
- * 
- * The .table__body tr td:nth-child(3) selector targets the third column of the table.
- * If a .table__card element is found within this column, it adds a box shadow with a blue color.
- * 
- * The .table__body tr td:nth-child(4) selector targets the fourth column of the table.
- * If a .table__card element is found within this column, it adds a box shadow with a green color.
- * It also hides the last button within the .table__card__btn-container.
- * 
- * The .table__card__btn-container class represents a container for buttons within a card.
- * It displays the buttons with space between them and adds a margin at the top.
- * 
- * The .table__card__btn class represents a button within a card.
- * It has a white background color, border, border radius, padding, font size, font weight, and color.
- * When hovered over, it changes the cursor to a pointer.
+ * CSS styles for the cards in the Kanban table.
  */
 .table__card {
   background-color: #fcffff;
   padding: 1rem;
   margin: 1.25rem 0rem;
   border-radius: 1rem;
-  cursor: pointer;
+  & :hover {
+    cursor: pointer;
+  }
 }
-
-.table__body tr td:nth-child(1) .table__card {
-  box-shadow: 0rem 0.2rem #dd4747;
+.table__body tr td:nth-child(1) {
+  & .table__card {
+    box-shadow: 0rem 0.2rem #dd4747;
+    & .table__card__btn-container {
+      display: flex;
+      justify-content: center;
+      & .table__card__btn:first-child {
+        display: none;
+      }
+    }
+  }
 }
-
-.table__body tr td:nth-child(1) .table__card__btn-container {
-  display: flex;
-  justify-content: center;
+.table__body tr td:nth-child(2) {
+  & .table__card {
+    box-shadow: 0rem 0.2rem #9e82ec;
+  }
 }
-
-.table__body tr td:nth-child(1) .table__card__btn:first-child {
-  display: none;
+.table__body tr td:nth-child(3) {
+  & .table__card {
+    box-shadow: 0rem 0.2rem #295474;
+  }
 }
-
-.table__body tr td:nth-child(2) .table__card {
-  box-shadow: 0rem 0.2rem #9e82ec;
-}
-
-.table__body tr td:nth-child(3) .table__card {
-  box-shadow: 0rem 0.2rem #295474;
-}
-
-.table__body tr td:nth-child(4) .table__card {
-  box-shadow: 0rem 0.2rem #31b791;
-}
-
-.table__body tr td:nth-child(4) .table__card__btn-container {
-  display: flex;
-  justify-content: center;
-}
-
-.table__body tr td:nth-child(4) .table__card__btn:last-child {
-  display: none;
+.table__body tr td:nth-child(4) {
+  & .table__card {
+    box-shadow: 0rem 0.2rem #31b791;
+    & .table__card__btn-container {
+      display: flex;
+      justify-content: center;
+      & .table__card__btn:last-child {
+        display: none;
+      }
+    }
+  }
 }
 
 .table__card__btn-container {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
-}
-
-.table__card__btn {
-  background-color: #fcffff;
-  border: none;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #000;
-  cursor: pointer;
+  & .table__card__btn {
+    background-color: #fcffff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    & :hover {
+      cursor: pointer;
+    }
+  }
 }
