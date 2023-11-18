@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tablero Kanban</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/cards.css" />
+    <link rel="stylesheet" href="/assets/css/btn.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis&family=Open+Sans&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="/assets/img/favicon.png"
+      type="image/x-icon"
+    />
+  </head>     
+  <body>
+    <main class="main">
+      <h1 class="main__title">Tablero Kanban</h1>
+      <table class="main__table">
+        <thead class="table__header">
+          <tr>
+            <th class="table_title">
+              Tarea
+              <br />
+              <br />
+              <button type="button" class="table__btn-create" data-btn>
+                Agregar
+                <i class="fas fa-plus-circle"></i>
+              </button>
+            </th>
+            <th class="table_title">Por hacer</th>
+            <th class="table_title">En proceso</th>
+            <th class="table_title">Hecho</th>
+          </tr>
+        </thead>
+        <tbody class="table__body" data-tbody>
+          
+        </tbody>
+      </table>
+      <dialog class="modal" data-modal>
+        <h3 class="modal__title">Agregar tarea</h3>
+        <input
+          type="text"
+          class="modal__input"
+          placeholder="Título"
+          data-input-title
+          required
+        />
+        <textarea
+          class="modal__textarea"
+          placeholder="Descripción"
+          data-textarea
+          required
+        ></textarea>
+        <div class="modal__btns">
+          <button type="button" class="modal__btn" data-btn-cancel>
+            Cancelar
+          </button>
+          <button type="button" class="modal__btn" data-btn-add>
+            Agregar
+          </button>
+      </dialog>
+    </main>
+    <script type="module" src="assets/js/app.js"></script>
+    <script type="module" src="assets/js/change-card.js"></script>
+  </body>
+</html>

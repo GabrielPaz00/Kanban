@@ -1,0 +1,24 @@
+.table__btn-create {
+  padding: 0.6rem;
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(62, 161, 219, 1) 11.2%,
+    rgba(93, 52, 236, 1) 100.2%
+  );
+  border: none;
+  color: #fff;
+  border-radius: 0.5rem;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  gap: 0rem;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.icon {
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: rgba(62, 161, 219, 1);
+}
