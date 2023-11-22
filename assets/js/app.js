@@ -15,7 +15,7 @@ const tableArray = new Array(4);
 
 //task
 const tasksArray = [
-  { title: 'Ejemplos', about: 'Buscar ejemplos de árboles u gráfos.' },
+  { title: 'Ejemplos', about: 'Buscar ejemplos de árboles y gráfos.' },
 ];
 tableArray[0] = tasksArray;
 
