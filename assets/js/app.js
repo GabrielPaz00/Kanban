@@ -14,23 +14,26 @@ closeBtn.addEventListener('click', closeModal);
 const tableArray = new Array(4);
 
 //task
-const tasksArray = [{ title: 'Tarea 4', about: 'Hacer tarea 4' }];
+const tasksArray = [
+  { title: 'Ejemplos', about: 'Buscar ejemplos de árboles u gráfos.' },
+];
 tableArray[0] = tasksArray;
 
 //to do
 
-const toDoArray = [
-  { title: 'Por hacer', about: 'hacer tarea 3 :)' },
-  { title: 'Por hacer', about: 'hacer tarea 3' },
-];
+const toDoArray = [{ title: 'Gráfos', about: 'Investigar sobre los gráfos.' }];
 tableArray[1] = toDoArray;
 
 //doing
-const doingArray = [{ title: 'En proceso', about: 'hacer tarea 2' }];
+const doingArray = [
+  { title: 'Árboles', about: 'Investigar sobre los árboles.' },
+];
 tableArray[2] = doingArray;
 
 //done
-const doneArray = [{ title: 'Hecho', about: 'hacer tarea 1' }];
+const doneArray = [
+  { title: 'Portada', about: 'Realizar portada para el parcial 3.' },
+];
 tableArray[3] = doneArray;
 
 //DLL
