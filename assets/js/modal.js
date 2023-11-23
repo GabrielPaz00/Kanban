@@ -1,5 +1,5 @@
 /**
- * Shows the modal by adding the 'modal--show' class and calling the showModal() method.
+ * Muestra el modal.
  */
 const showModal = () => {
   const modal = document.querySelector('[data-modal]');
@@ -7,7 +7,10 @@ const showModal = () => {
   modal.showModal();
 };
 /**
- * Closes the modal and resets the input fields.
+ * Cierra el modal y realiza las siguientes acciones:
+ * - Cierra el modal.
+ * - Limpia el valor del campo de entrada 'newTaskInput'.
+ * - Limpia el valor del campo de entrada 'aboutInput'.
  */
 const closeModal = () => {
   const modal = document.querySelector('[data-modal]');

@@ -2,44 +2,44 @@ import { showModal, closeModal } from './modal.js';
 import { addNewTask } from './add-task.js';
 import { createNewTemplate } from './create-template.js';
 
-//modal buttons
-//show modal
+// Botones del modal
+
+// Mostrar modal
 const btn = document.querySelector('[data-btn]');
 btn.addEventListener('click', showModal);
-//close modal
+// Cerrar modal
 const closeBtn = document.querySelector('[data-btn-cancel]');
 closeBtn.addEventListener('click', closeModal);
 
-//table
+// El array que contiene las columnas del tablero Kanban
 const tableArray = new Array(4);
 
-//task
+// Tareas
 const tasksArray = [
   { title: 'Ejemplos', about: 'Buscar ejemplos de árboles y gráfos.' },
 ];
 tableArray[0] = tasksArray;
 
-//to do
-
+// Por hacer
 const toDoArray = [{ title: 'Gráfos', about: 'Investigar sobre los gráfos.' }];
 tableArray[1] = toDoArray;
 
-//doing
+// En proceso
 const doingArray = [
   { title: 'Árboles', about: 'Investigar sobre los árboles.' },
 ];
 tableArray[2] = doingArray;
 
-//done
+// Hecho
 const doneArray = [
   { title: 'Portada', about: 'Realizar portada para el parcial 3.' },
 ];
 tableArray[3] = doneArray;
 
-//DLL
+// Array de filas (contiene listas doblemente enlazadas)
 let rows = [];
 
-//show tasks
+// Mostrar tareas
 for (let i = 0; i < tableArray.length; i++) {
   tableArray[i].forEach((task) => {
     const { title, description } = createNewTemplate(i, tableArray, rows);
@@ -47,17 +47,18 @@ for (let i = 0; i < tableArray.length; i++) {
     description.textContent = task.about;
   });
 }
-//add task
+
+// Agregar tarea
 const addBtn = document.querySelector('[data-btn-add]');
 addBtn.addEventListener('click', () => {
   addNewTask(tasksArray, tableArray, rows);
 });
 
-//show info
+// Mostrar información en consola.
 
+// Muestra el array de la tabla.
 console.log(tableArray);
-
-//show list
+// Muestra todas las listas doblemente enlazadas.
 rows.forEach((row, index) => {
   console.log(`Lista ${index + 1} : `);
   row.showList();
